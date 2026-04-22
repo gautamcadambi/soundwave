@@ -18,7 +18,7 @@ app.use(session({
 
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID;
 const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET;
-const REDIRECT_URI = 'http://127.0.0.1:3000/callback';
+const REDIRECT_URI = process.env.SPOTIFY_REDIRECT_URI || 'http://127.0.0.1:3000/callback';;
 
 const SCOPES = [
   'streaming', 'user-read-email', 'user-read-private',
